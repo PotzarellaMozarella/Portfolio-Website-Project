@@ -7,16 +7,18 @@
 
 body {
     font-family:'Josefin Sans', sans-serif;
-    background-color: white;
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
 }
 .header {
-    background-color: black;
+    background-color: #FEFAE0;
     width: 100%;
-    position: fixed;
+    position: sticky;
+    top: 0;
     display: inline-flex;
-    overflow: scroll;
     z-index: 10;
-    
+    border-bottom: 0.2rem solid #BC6C25 ;
 }
 .right {
     display: inline-flex;
@@ -41,11 +43,118 @@ body {
     object-fit: contain;
 }
 li>a {
-    color: white;
+    color: #283618;
     text-decoration: none;
     display: inline-flex;
+    flex-wrap: nowrap;
 }
-@media screen and (min-width: 415px) and  (max-width: 678px) {
+a:hover {
+    background-color: #DDA15E;
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+    border-radius: 4px ;
+  }
+  
+  a:active {
+    background-color: white;
+    color: #606C38;
+  }
+
+  main {
+   width: 100%;
+   position: relative;
+  }
+
+  .sec1 {
+    height: 70vh;
+    background-color: #FEFAE0;
+    position: relative;
+    z-index: 1;
+    border-bottom: 0.2rem solid #BC6C25;
+  }
+#bckgnd {
+    background-color: #DDA15E ;
+    opacity: 70%;
+    height: 80%;
+    width: 80%;
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    right: 10%;
+    border-radius: 1%;
+    justify-content:center;
+    align-items: center;
+    gap: 1rem;
+    border: 0.2rem solid black;
+  }
+  #avatar {
+    max-height: 40%;
+    z-index: 10;
+    border-radius: 25%;
+    padding: 0.5rem;
+  }
+  #name {
+    font-size: 3rem;
+    color: #283618 ;
+    z-index: 10;
+    display: block;
+    padding: 1rem;
+  }
+  .wrapper{
+    padding-top: 1rem;
+    z-index: 10;
+    display: flex;
+    position: relative;
+    top: 1rem;  
+    
+}
+  
+  .wrapper>a{
+    display: flex;
+    width: 10rem;
+    height: 3rem;
+    line-height: 40px;
+    font-size: 11px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    transition: all .35s;
+    z-index: 10;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wrapper>a span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .wrapper>a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #283618;
+    transition: all .35s;
+  }
+  
+  .wrapper>a:hover{
+    color: #fff;
+  }
+  
+  .wrapper>a:hover:after{
+    width: 100%;
+  }
+  
+@media screen and (min-width: 415px) and  (max-width: 822px) {
     .header {
         justify-content: space-around;
         align-items: center;
@@ -56,20 +165,26 @@ li>a {
         align-self: center;
         justify-content: space-between;
     }
-    .right {
-        font-size: 1rem; 
+    .right { 
         flex-wrap: wrap;
         flex-direction: column;
         align-items: right;
         text-align: right;
     }
     li>a {
-       flex-direction: column;
+       flex-direction: row;
     }
-  }
+    #bckgnd {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+}
 
-  @media screen and (max-width: 415px) {
+
+  @media screen and (max-width: 512px) {
     .header {
+        display: block;
         justify-content: space-around;
         align-items: center;
         align-content: center;    
@@ -89,4 +204,14 @@ li>a {
     li>a {
         text-align: center;
     }
+    #bckgnd {
+      flex-direction: column;
+      justify-content: flex-start
+    }
+    #name {
+    text-align: center;
+    }
+    .wrapper {
+        justify-content: center;
+      }
   }
