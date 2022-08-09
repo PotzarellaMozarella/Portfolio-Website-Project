@@ -67,7 +67,7 @@ li>a {
   main {
    width: 100%;
    position: relative;
-   height: 100vh;
+   height: 90vh;
   }
 
 
@@ -165,7 +165,7 @@ li>a {
   }
 
   /* projects accordion */
-  .sec2, .sec3, footer {
+  .sec2, .sec3, footer, .contactsec {
     background-color: #FEFAE0;
     padding: 1.5em;
     display: flex;
@@ -175,7 +175,7 @@ li>a {
     width: 100%;
     color: #283618;
     }
-    #projects, #skills {
+    #projects, #skills, #contact {
         font-size: 2rem;
         color: #283618 ;
         display: block;
@@ -231,7 +231,7 @@ li>a {
       flex-wrap: wrap;
     }
     
-    .skills-icons {
+    .skills-icons, .contact-icons {
       display: flex;
       font-size: 2.5em;
       gap: 0.5rem;
@@ -244,6 +244,25 @@ li>a {
 /* footer section */
     .heart {
       color: #BC6C25;
+    }
+    footer {
+      background-color: #FEFAE0;
+      padding: 1.5em;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      color: #283618;
+      }
+
+/* contacts section */
+    .contact-container>p {
+      padding: 1.5rem 0 0 0;
+    }
+
+    .contact-icons>a {
+       color: #BC6C25;
     }
 
     /* for responsivenes*/
@@ -260,11 +279,11 @@ li>a {
     }
     .right { 
         flex-wrap: wrap;
-        flex-direction: column;
+        
         align-items: right;
         text-align: right;
         gap: 1rem;
-        padding-right: 0;    
+        padding-right: 2rem;    
         font-size: 1rem; 
     }
     li>a {
