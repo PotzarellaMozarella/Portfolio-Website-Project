@@ -1,4 +1,4 @@
-
+//to pick random messages about Parisha
 function message(){   
 
 const randMsgs = ["is a marketer", "is a salesperson", "is a networker", "is learning french", "loves her dog", "loves music", "loves rowing", "could kill for a pizza", "is learning how to play ukulele", "loves gin", "loves to travel", "is mad about fashion"];
@@ -19,9 +19,14 @@ const randMsgs = ["is a marketer", "is a salesperson", "is a networker", "is lea
         } else {
             document.getElementById("changeTxt").innerHTML = currentMsg;
             prevMsg = currentMsg; // set prevMsg to currentMsg
-        };
-   
-   
+        }; 
+};
 
- 
-}
+//projects section accordion
+
+const accordion  = document.getElementsByClassName('contentBx');
+for(i=0; i<accordion.length; i++) {
+    accordion[i].addEventListener('click',function(){
+        this.classList.toggle('active');
+    });
+};

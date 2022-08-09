@@ -11,6 +11,8 @@ body {
     min-width: 100vw;
     position: relative;
 }
+
+  /* header with logo and navigation*/
 .header {
     background-color: #FEFAE0;
     width: 100%;
@@ -23,14 +25,14 @@ body {
 .right {
     display: inline-flex;
     list-style: none;
-    gap: 1.8rem;
-    float: right;
+    gap: 1.5rem;
     font-size: 1.5rem;
-    padding: 3rem;
+    padding: 1rem;
+    padding-right: 3rem;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-}
+   }
 .left {
     display: inline-flex;
     align-items: center;
@@ -48,29 +50,35 @@ li>a {
     display: inline-flex;
     flex-wrap: nowrap;
 }
-a:hover {
+    a:hover {
     background-color: #DDA15E;
     cursor: pointer;
     padding: 0.5rem 0.5rem;
     border-radius: 4px ;
-  }
+    }
   
-  a:active {
+    a:active {
     background-color: white;
     color: #606C38;
-  }
+    }
 
+
+  /* all sections */
   main {
    width: 100%;
    position: relative;
+   height: 100vh;
   }
 
-  .sec1 {
-    height: 70vh;
+
+  /* about me section */
+    .sec1 {
+    min-height: 70%;
     background-color: #FEFAE0;
     position: relative;
     z-index: 1;
     border-bottom: 0.2rem solid #BC6C25;
+    scroll-margin-top: 10rem;
   }
 #bckgnd {
     background-color: #DDA15E ;
@@ -102,6 +110,9 @@ a:hover {
     display: block;
     padding: 1rem;
   }
+  
+  
+  /* button to change about me text*/
   .wrapper{
     padding-top: 1rem;
     z-index: 10;
@@ -153,7 +164,66 @@ a:hover {
   .wrapper>a:hover:after{
     width: 100%;
   }
+
+  /* projects accordion */
+  .sec2 {
+    background-color: #FEFAE0;
+    border-bottom: 0.2rem solid #BC6C25;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    }
+    #projects {
+        font-size: 2rem;
+        color: #283618 ;
+        display: block;
+    }
+    .accordion {
+        max-width: 80%;
+    }
+    .accordion .contentBx {
+        position: relative;
+        margin: 1rem 1rem;
+    }
+    .accordion .contentBx .label {
+        position: relative;
+        padding: 1rem;
+        background: #DDA15E;
+        color: #283618;
+        cursor: pointer;
+       
+    }
+    .accordion .contentBx .label::before {
+        content: '+';
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+    }
+    .accordion .contentBx.active .label::before {
+        content: '-'; 
+    }
+    .accordion .contentBx .content {
+        position: relative;
+        background: #DDA15E;
+        height: 0;
+        overflow: hidden;
+        transition: 0.4s;
+        overflow-y: auto;
+    }
+    .accordion .contentBx.active .content {
+        height: auto;
+        padding: 1rem;
+        line-height: 2rem;
+        color: #283618;
+    }
+
   
+    /* for responsivenes*/
 @media screen and (min-width: 415px) and  (max-width: 822px) {
     .header {
         justify-content: space-around;
@@ -170,6 +240,8 @@ a:hover {
         flex-direction: column;
         align-items: right;
         text-align: right;
+        gap: 1rem;
+        padding-right: 0;    
     }
     li>a {
        flex-direction: row;
@@ -180,14 +252,14 @@ a:hover {
     }
     
 }
-
+ /* for responsivenes*/
 
   @media screen and (max-width: 512px) {
     .header {
         display: block;
         justify-content: space-around;
         align-items: center;
-        align-content: center;    
+        align-content: center; 
     }
     .left {
         width: 100%;
@@ -198,11 +270,15 @@ a:hover {
         flex-wrap: wrap;
         flex-direction: column;
         text-align: center;
-        float: none;
         width: 100%;
+        gap: 1rem;
+        padding: 0 0.5rem 0.5rem 0.5rem;  
     }
     li>a {
         text-align: center;
+    }
+    .sec1 {
+        scroll-margin-top: 18rem;
     }
     #bckgnd {
       flex-direction: column;
@@ -213,5 +289,7 @@ a:hover {
     }
     .wrapper {
         justify-content: center;
+        padding: 1rem;
+        top: 0.2rem;  
       }
   }
