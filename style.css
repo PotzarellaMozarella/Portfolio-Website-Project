@@ -166,7 +166,7 @@ li>a {
   }
 
   /* projects accordion */
-  .sec2 {
+  .sec2, .sec3 {
     background-color: #FEFAE0;
     border-bottom: 0.2rem solid #BC6C25;
     padding: 3em;
@@ -176,7 +176,7 @@ li>a {
     align-items: center;
     width: 100%;
     }
-    #projects {
+    #projects, #skills {
         font-size: 2rem;
         color: #283618 ;
         display: block;
@@ -222,6 +222,26 @@ li>a {
         color: #283618;
     }
 
+/* skills section */
+    .sec3 {
+      padding: 3rem 2rem;
+    }
+    #skills-container {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    
+    .skills-icons {
+      display: flex;
+      font-size: 2.5em;
+      gap: 0.5rem;
+      width: 100%;
+      justify-content: center;
+      padding: 1.5rem 0;
+      gap: 1rem;
+      color: #BC6C25;
+    }
   
     /* for responsivenes*/
 @media screen and (min-width: 415px) and  (max-width: 822px) {
@@ -242,6 +262,7 @@ li>a {
         text-align: right;
         gap: 1rem;
         padding-right: 0;    
+        font-size: 1rem; 
     }
     li>a {
        flex-direction: row;
@@ -249,6 +270,9 @@ li>a {
     #bckgnd {
         flex-direction: column;
         justify-content: flex-start;
+    }
+    .skills-icons {
+      font-size: 2rem;
     }
     
 }
@@ -291,5 +315,8 @@ li>a {
         justify-content: center;
         padding: 1rem;
         top: 0.2rem;  
+      }
+      .skills-icons {
+        font-size: 2rem;
       }
   }
