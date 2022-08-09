@@ -1,1 +1,1 @@
-Trial portfolio website for CodeAcedemy Project
+Portfolio website for CodeAcedemy Project
