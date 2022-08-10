@@ -264,6 +264,9 @@ li>a {
     .contact-icons>a {
        color: #BC6C25;
     }
+    .contactsec {
+     scroll-margin-top: 10rem;
+    }
 
     /* for responsivenes*/
 @media screen and (min-width: 415px) and  (max-width: 822px) {
@@ -341,4 +344,7 @@ li>a {
       .skills-icons {
         font-size: 2rem;
       }
+      .contactsec {
+     scroll-margin-top: 18rem;
+    }
   }
