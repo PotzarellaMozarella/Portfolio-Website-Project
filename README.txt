@@ -1,2 +1,1 @@
-Portfolio website for CodeAcedemy Project
-Used: HTML, CSS & JS
+Portfolio website using: HTML, CSS & JS
