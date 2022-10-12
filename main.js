@@ -1,26 +1,23 @@
 //to pick random messages about Parisha
-function message(){   
+let previousMsg="";
+const randMsgs = ["is a marketer", "is a salesperson", "is a networker", "is learning french", "loves her dog", "loves music", "loves rowing", "could kill for a pizza", "likes playing ukulele", "loves gin", "loves to travel", "is mad about fashion"];
 
-const randMsgs = ["is a marketer", "is a salesperson", "is a networker", "is learning french", "loves her dog", "loves music", "loves rowing", "could kill for a pizza", "is learning how to play ukulele", "loves gin", "loves to travel", "is mad about fashion"];
-    var prevMsg = "";
-    var currentMsg = "is an amateur coder"; 
-    var ranNum = Math.floor((Math.random() * randMsgs.length) + 0);
-    currentMsg = randMsgs[ranNum];
-        if(prevMsg == currentMsg) {
-            var anotherMsg = "";
-            if(ranNum >= 0 && ranNum < 4) {
-                anotherMsg = randomMsg[ranNum + 1];
-            }
-            else {
-                anotherMsg = randomMsg[ranNum - 1];
-            }
-            document.getElementById("changeTxt").innerHTML = anotherMsg;
-            prevMsg = anotherMsg; // set prevMsg to anotherMsg
-        } else {
-            document.getElementById("changeTxt").innerHTML = currentMsg;
-            prevMsg = currentMsg; // set prevMsg to currentMsg
-        }; 
-};
+function getRandomMsg(){
+    let randomMsg = randMsgs[Math.floor(Math.random() * randMsgs.length)]; // get a random message from the array
+    return randomMsg;
+}
+
+function randomizeMsg(){
+    previousMsg = document.getElementById("changeTxt").textContent; // got the current msg from the page.
+    newrandomMsg = getRandomMsg(); 
+    while (newrandomMsg == previousMsg){ // if we get the same msg as the current msg, try again.
+        newrandomMsg = getRandomMsg();
+    }
+    document.getElementById("changeTxt").innerHTML = newrandomMsg;
+    console.log(newrandomMsg);
+    previousMsg = newrandomMsg; // change msg to new msg
+}
+
 
 //projects section accordion
 
