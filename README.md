@@ -1,4 +1,4 @@
-# Parisha's Portfolio Website
+# Parisha's Portfolio Website   
 
 Welcome to Parisha's Portfolio Website, a showcase of personal projects and skills. This website serves as a platform to display Parisha's creative coding endeavors, providing insights into her interests, capabilities, and more. Explore the various sections to learn more about Parisha and her contributions to the world of web development.
 
